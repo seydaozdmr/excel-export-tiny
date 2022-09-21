@@ -39,11 +39,11 @@ public class ExportService {
 //        font.setCharSet(162);
         style.setFont(font);
 
-        createCell(row, 0, "Ldap Name", style);
-        createCell(row, 1, "Rozet Adı", style);
-        createCell(row, 2, "Başlangıç Tarihi", style);
-        createCell(row, 3, "Bitiş Tarihi", style);
-        createCell(row, 4, "Veriliş Nedeni", style);
+        createCell(row, 0, "Adı", style);
+        createCell(row, 1, "Soyadı", style);
+        createCell(row, 2, "Doğum Tarihi", style);
+        createCell(row, 3, "Sınıfı ", style);
+        createCell(row, 4, "Mesleği ", style);
     }
 
     private void createCell(Row row, int columnCount, Object value, CellStyle style) {
