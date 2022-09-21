@@ -5,6 +5,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -38,5 +39,10 @@ public class ExportController {
 
         return export;
 
+    }
+
+    @PostMapping("/base64tobytearray")
+    public ResponseEntity<byte[]> base64ToByteArray(@RequestBody String base64){
+        return ResponseEntity.ok(exportService.base64ToByteArray(base64));
     }
 }

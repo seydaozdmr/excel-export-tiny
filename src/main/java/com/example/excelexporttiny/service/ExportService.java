@@ -83,6 +83,10 @@ public class ExportService {
         return ResponseEntity.ok().headers(response).body(result);
     }
 
+    public byte[] base64ToByteArray(String base64){
+        return Base64.decodeBase64(base64);
+    }
+
 
 
 
